@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 import ru.kata.spring.boot_security.demo.model.Role;
 import ru.kata.spring.boot_security.demo.model.User;
 import ru.kata.spring.boot_security.demo.service.RoleSerivce;
-import ru.kata.spring.boot_security.demo.service.RoleServiceImpl;
 import ru.kata.spring.boot_security.demo.service.UserService;
 
 import javax.annotation.PostConstruct;
@@ -39,7 +38,5 @@ public class Util {
                 new HashSet<Role>(Set.of(roleAdmin, roleUser)));
         userService.saveUser(new User("user2", "user2", "usereovich2", 28, "user2@mail.com"),
                 new HashSet<Role>(Set.of(roleUser)));
-//        userService.saveUser(new User("Mari", "200", "Tikhonova", 26, "user@mail.com"));
-//        userService.saveUser(new User("Misha","300", "Voloshkin", 34, "user@mail.com"));
     }
 }
